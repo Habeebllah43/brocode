@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+    }
+    #dicebutton {
+      position: absolute;
+      font-size: 30px;
+    }
+  </style>
+  <body>
+    <button id="dicebutton">roll</button>
+    <label id="labelDice"></label>
+  </body>
+</html>
+<script>
+  const min = 1;
+  const max = 6;
+
+  const dicebutton = document.getElementById("dicebutton");
+  const labelDice = document.getElementById("labelDice");
+
+  let RandomNum;
+  dicebutton.onclick = function () {
+    RandomNum = Math.floor(Math.random() * max) + min;
+    labelDice.innerHTML = RandomNum;
+  };
+</script>
+=

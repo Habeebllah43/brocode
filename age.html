@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>enter my age</label><br />
+    <input type="text" id="Agelimit" />
+    <button id="submitAge">submit</button>
+    <p id="giveME"></p>
+  </body>
+</html>
+<script>
+  const Agelimit = document.getElementById("Agelimit");
+  const submitAge = document.getElementById("submitAge");
+  const giveME = document.getElementById("giveME");
+
+  let age;
+
+  submitAge.onclick = function () {
+    age = Agelimit.value;
+    age = Number(age);
+    if (age == 102) {
+      giveME.textContent = "you are too old to have licence";
+    } else if (age >= 10) {
+      giveME.textContent = "yo are too proud";
+    } else {
+      giveME.textContent = "get out of here";
+    }
+  };
+</script>

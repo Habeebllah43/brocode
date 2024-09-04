@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="radio" id="mySubscrribe" />
+    <label for="subscribe">subscribe</label><br />
+    <input type="radio" id="payPal" />
+    <label for="payPal">Paypal</label><br />
+    <input type="radio" id="viSa" />
+    <label for="viSa">Beast</label><br />
+
+    <button id="MySubmit">Submit</button><br />
+
+    <p id="mytext"></p>
+  </body>
+</html>
+<script>
+  const mySubscrribe = document.getElementById("mySubscrribe");
+  const payPal = document.getElementById("payPal");
+  const viSa = document.getElementById("viSa");
+  const MySubmit = document.getElementById("MySubmit");
+  const mytext = document.getElementById("mytext");
+
+  MySubmit.onclick = function () {
+    if (mySubscrribe.checked) {
+      mytext.textContent = "you are subscribe to DSTV";
+    } else {
+      ("you are not subcribe");
+    }
+    if (payPal.checked) {
+      mytext.innerHTML = "you are subscribe with paypal";
+    }
+  };
+</script>
