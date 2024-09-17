@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const minNum = 1;
+  const maxNum = 100;
+
+  const ansWer = Math.floor(Math.random() * (maxNum - minNum + 1));
+
+  let attempt = 0;
+  let guess;
+  let bonngo = true;
+
+  while (bonngo) {
+    guess = window.prompt(
+      `i want to guess a between number ${minNum} - ${maxNum} `
+    );
+
+    guess = Number(guess);
+
+    if (isNaN(guess)) {
+      alert("enter a valid number");
+    } else if (guess < minNum || guess > maxNum) {
+      alert("enter a valid number");
+    } else {
+      attempt++;
+
+      if (guess < ansWer) {
+        alert("anwer too low, try again");
+      } else if (guess > ansWer) {
+        alert("answer too high, try it again");
+      } else {
+        alert(
+          `congratulations , you get the right ${ansWer} but it took you ${attempt}`
+        );
+
+        bonngo = false;
+      }
+    }
+  }
+</script>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: hsla(0, 2%, 92%, 0.845);
+    }
+    h1 {
+      color: hsl(240, 75%, 39%);
+    }
+    form {
+      background-color: white;
+      text-align: center;
+      max-width: 350px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px hsla(0, 40%, 2%, 0.21);
+    }
+    #biggest {
+      width: 50%;
+      text-align: center;
+      font-size: 2em;
+      border: 2px solid black;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    label {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 15px;
+      background-color: blueviolet;
+      font-size: 20px;
+      color: white;
+      border-radius: 3px;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: hsl(271, 44%, 20%);
+    }
+    #myText {
+      font-size: 1em;
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <form>
+      <h1>temperature conversion</h1>
+
+      <input type="number" id="biggest" value="0" /> <br />
+
+      <input type="radio" id="toFahrenheit" name="unit" />
+      <label for="toFahrenheit">celsius ➡ Fahrenheit </label> <br />
+
+      <input type="radio" id="tocelsius" name="unit" />
+      <label for="tocelsius"> Fahrenheit ➡ celsius </label> <br />
+
+      <button type="button" onclick="convert()">submit</button>
+
+      <p id="myText"></p>
+    </form>
+  </body>
+</html>
+<script>
+  const biggest = document.getElementById("biggest");
+  const toFahrenheit = document.getElementById("toFahrenheit");
+  const tocelsius = document.getElementById("tocelsius");
+  const myText = document.getElementById("myText");
+  let temp;
+
+  function convert() {
+    if (toFahrenheit.checked) {
+      temp = Number(biggest.value);
+      temp = (temp * 9) / 5 + 32;
+      myText.textContent = temp + "°F";
+    } else if (tocelsius.checked) {
+      temp = Number(biggest.value);
+      temp = ((temp - 32) * 5) / 9;
+      myText.textContent = temp.toFixed(1) + "°C";
+    } else {
+      myText.textContent = "input a valid number";
+    }
+  }
+</script>
