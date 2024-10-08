@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="realdice.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Roll dice</h1>
+
+      <label># of dice</label>
+      <input type="number" id="beske" value="1" min="1" />
+      <button type="button" id="biggest" onclick="rollice()">roll dice</button>
+
+      <div id="diceresult"></div>
+      <div id="diceimages"></div>
+    </div>
+  </body>
+</html>
+<script>
+  function rollice() {
+    const beske = document.getElementById("beske").value;
+    const diceresult = document.getElementById("diceresult");
+    const diceimages = document.getElementById("diceimages");
+    const values = [];
+    const images = [];
+
+    for (let i = 0; i < beske; i++) {
+      const value = Math.floor(Math.random() * 6) + 1;
+
+      values.push(value);
+      images.push(`<img src="dice 1.png" alt="Dice showing ${value}">`);
+    }
+
+    diceresult.innerHTML = `dice: ${values.join(", ")}`;
+    diceimages.innerHTML = images.join(" ");
+  }
+
+  // console.log(values);
+</script>
