@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let numB = [1, 2, 3, 4, 5, 6, 7];
+
+  //   let even = numB.filter(IsEven);
+  //   let odd = numB.filter(IsOdd);
+
+  //   console.log(odd);
+
+  //   function IsEven(element) {
+  //     return element % 2 === 0;
+  //   }
+
+  //   function IsOdd(element) {
+  //     return element % 2 === 1;
+  //   }
+
+  //   const ages = [12, 14, 15, 18, 20];
+  //   const adults = ages.filter(IsAdult);
+  //   console.log(adults);
+
+  //   function IsAdult(element) {
+  //     return element >= 18;
+  //   }
+
+  const words = ["bisi", "habeeb", "bimpe", "bukola", "damilare"];
+
+  const wordy = words.filter(shortword);
+  console.log(wordy);
+
+  function shortword(element) {
+    return element.length >= 4;
+  }
+</script>
