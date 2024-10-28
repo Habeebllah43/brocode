@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // function declaration
+  function hello() {
+    console.log("hello world");
+  }
+
+  //   function expression
+
+  const hallo = function () {
+    console.log("hello");
+  };
+  hallo();
+
+  const helllo=function (){
+console.log('you are the best');
+
+  }
+
+  setTimeout(helllo, 3000);
+
+
+  // setTimeout(() => {
+  //   console.log('hello');
+    
+  // }, 3000);
+
+
+  const numbers=[1,2,3,4,6,]
+
+  const numby=numbers.map(function(element){
+    return Math.pow(element, 2)
+  })
+  console.log(numby);
+  const cuby=numbers.map(function (element) {
+    return Math.pow(element, 3)
+  })
+console.log(cuby);
+
+const EvenNumber=numbers.filter(function (element) {
+  return element % 2===0
+})
+console.log(EvenNumber);
+
+const Total=numbers.reduce(function (accumulator, element) {
+  return accumulator + element
+})
+
+console.log(Total);
+
+  
+</script>
